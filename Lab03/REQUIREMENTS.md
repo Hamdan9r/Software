@@ -79,70 +79,121 @@ short enough to test and trace.
 
 ## 5. User stories and acceptance criteria
 
-Write at least three stories from different stakeholder viewpoints. Each story
-needs at least two acceptance criteria. Across the set, include a failure,
-permission boundary, privacy rule, or other non-happy path.
+### US-1 [Source: S1, S5, UR-2]
 
-### US-1 [Source: S?, UR-?]
-
-As a <role>,
-
-I want <capability>,
-
-so that <benefit>.
+As a student attendee, I want to control whether other attendees see my RSVP identity, so that attending does not disclose my interests without my choice.
 
 Acceptance criteria:
 
--
--
+- Given an eligible signed-in student, when they RSVP without changing visibility, then the RSVP is recorded and neither another attendee nor a group officer can see that identity.
+- Given a private RSVP, when its owner opts in to visibility, then only authenticated users eligible to view the event can see the identity; after opting out it disappears from those views.
+- Given an existing RSVP, when its owner withdraws it, then the student is no longer recorded as a current attendee.
 
-### US-2 [Source: S?, UR-?]
+### US-2 [Source: S2, UR-4, UR-5, UR-6]
 
-As a <role>,
-
-I want <capability>,
-
-so that <benefit>.
+As a group officer, I want to share drafts and publish to the correct audience, so that our group can collaborate without exposing restricted content.
 
 Acceptance criteria:
 
--
--
+- Given two approved officers of one verified group, when one saves a draft announcement or event, then the other can open, edit, and publish it.
+- Given an ordinary student or an officer of a different group, when they attempt to publish that draft, then publication is rejected and the draft stays unpublished.
+- Given a members-only event, when a non-member uses the feed, search, a direct link, or an RSVP action, then event content and RSVP access are denied; a member can view and RSVP.
 
-### US-3 [Source: S?, UR-?]
+### US-3 [Source: S2, UR-7]
 
-As a <role>,
-
-I want <capability>,
-
-so that <benefit>.
+As a student who RSVP'd, I want to receive time and place corrections, so that I can attend at the correct location and time.
 
 Acceptance criteria:
 
--
--
+- Given current RSVPs, when an approved officer successfully saves a time or place change to the published event, then one change notification is created for each current RSVP owner.
+- Given a failed or unauthorized update, when it is rejected, then no change notification is created and the published details remain unchanged.
+- Given a student who withdrew their RSVP before the update, when the officer saves a correction, then that student receives no new correction notification.
+
+### US-4 [Source: S3, S6, UR-8, UR-9]
+
+As a campus moderator, I want to act on reports and review appeals with retained evidence, so that harmful content can be hidden and decisions remain accountable.
+
+Acceptance criteria:
+
+- Given a report of an event, announcement, or group profile with an item and reason, when a moderator opens it, then its content snapshot, reason, and report time are visible; missing-item or empty-reason reports are rejected.
+- Given an authorized moderator, when they hide the reported item, then ordinary users cannot retrieve it through lists or direct links, while authorized moderators retain the evidence and an audit entry with actor, action, item, reason, and timestamp.
+- Given a hidden item, when an approved officer of its group appeals, then the appeal links to the original decision and evidence; another group's officer cannot open it.
+- Given an appeal, when an authorized moderator reverses the hide decision with a reason, then content is restored, the outcome is recorded, and the appealing group's officers can read it.
+
+### US-5 [Source: S4, S6, UR-10]
+
+As Student Affairs, I want to control official verification, so that a badge reliably distinguishes a checked group from an impersonator.
+
+Acceptance criteria:
+
+- Given an authorized Student Affairs user, when they approve verification, then the group's profile and published content display its official badge; revoking verification removes that badge.
+- Given an ordinary group officer, when they attempt to grant verification, then the action is rejected and no official badge is granted.
+
+### US-6 [Source: S4, UR-11]
+
+As Student Affairs, I want evidence that the pilot handles the stated population, so that I can assess readiness before Orientation Week.
+
+Acceptance criteria:
+
+- Given the A2 dataset with 5,000 students and 200 groups, when all Must functional acceptance checks run, then every check passes without missing or misattributed records.
+- Given a readiness review, when the NFR-2 load scenario runs on the documented pilot environment, then its p95 latency and error rate are reported against the provisional Should targets of 2 seconds and below 1%; a failure is recorded for a scope/performance decision and is not called a pass.
+- Given no agreed Orientation Week date or peak-load figure, when readiness is assessed, then Q1 remains open and the population test alone is not treated as proof of peak readiness.
+
+### US-7 [Source: S5, UR-12, UR-13]
+
+As the Data Protection Officer, I want necessary data collection and timely deletion of cancelled-event attendance data, so that the pilot does not keep unrelated or expired personal information.
+
+Acceptance criteria:
+
+- Given a cancelled event with attendance copies in supported storage, exports, backups, and moderation evidence, when 30 days have elapsed, then no attendance records or attendance-identifying copies remain, including after a supported restore.
+- Given an event that has not been cancelled, when its creation date reaches 30 days, then the cancellation-based deletion rule does not delete its attendance records.
+- Given a profile update containing a phone-number field outside the A5 inventory, when it is submitted, then that field is rejected and is not stored.
+
+### US-8 [Source: S1, UR-1, UR-3]
+
+As a student using a phone and screen reader, I want an accessible group feed and event activities, so that I can participate without switching to another device or service.
+
+Acceptance criteria:
+
+- Given successful university sign-in, when a student follows a verified group, then its audience-eligible published announcements and events are available in the followed-group feed; unfollowing removes that group's contribution from that feed.
+- Given the A1 accessibility setup, when each of its six flows is performed, then every flow completes without unlabeled actions, keyboard traps, or unannounced success/error results.
+- Given a 320 CSS pixel viewport, when each A1 flow is performed, then controls remain visible and operable without horizontal page scrolling.
+- Given unsuccessful university sign-in, when a user opens a content URL, then university-only content is not shown.
+
+### US-9 [Source: S3, S6, UR-14]
+
+As a moderator, I want reports grouped by item, so that I can avoid investigating the same content repeatedly. This is a Could enhancement.
+
+Acceptance criteria:
+
+- Given multiple reports about one item and reports about another, when the moderator filters by the first item, then only reports about that item are shown.
+- Given that filtered view, when the moderator opens each report, then its individual reason and report time remain available.
 
 ## 6. MoSCoW summary
 
-List requirement or story IDs in every category. The Won't category must state
-what is excluded from this release.
-
-- Must:
-- Should:
-- Could:
-- Won't this release:
+- Must: UR-1 through UR-13; FR-1 through FR-19; NFR-1, NFR-3, NFR-4, NFR-5; US-1 through US-8 (US-6's latency criterion explicitly evaluates a provisional Should target).
+- Should: NFR-2, the provisional latency/error target under A2. Confirm peak demand before deciding whether a revised target must become a release gate.
+- Could: UR-14, FR-20, US-9, grouping related reports. Core abuse-report handling remains Must.
+- Won't this release: X-1 native mobile applications; X-2 direct messages; X-3 external users; X-4 payments; X-5 video hosting; X-6 AI recommendations. These IDs are the scope exclusions in Section 1.
 
 ## 7. Traceability
 
-Add at least four complete paths. Every row should connect evidence to a user
-requirement, a system requirement, and a user story.
-
 | Stakeholder need | User requirement | System requirement | User story |
 |---|---|---|---|
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| S1: one place for followed groups' updates | UR-1 | FR-1, FR-2 | US-8: sign-in and followed-group feed |
+| S1/S5: private RSVP unless explicitly shared | UR-2 | FR-3, FR-18 | US-1: default privacy, opt-in/out, withdrawal |
+| S1: phone and screen-reader access | UR-3 | NFR-1, NFR-3 | US-8: all six accessible phone flows |
+| S2: officers share drafts | UR-4 | FR-4 | US-2: another officer finishes a draft |
+| S2: only approved officers publish | UR-5 | FR-1, FR-5 | US-2: authorized and rejected publishing |
+| S2: university or members-only events | UR-6 | FR-6, FR-7 | US-2: audience and direct-link boundary |
+| S2: tell current RSVPs about a time/place correction | UR-7 | FR-8: creates notifications after a saved correction; FR-17 | US-3: notification creation and failed-update case |
+| S3/S6: reports show content and reason, including abuse | UR-8 | FR-9, FR-14 | US-4: report evidence and rejected incomplete report |
+| S3: hide content, preserve evidence and decision actor, support appeals | UR-9 | FR-10, FR-11, FR-15, FR-16 | US-4: hide, group appeal boundary, recorded outcome |
+| S4/S6: checked groups alone receive the official badge | UR-10 | FR-5, FR-12 | US-5: grant/revoke and unauthorized attempt |
+| S4: pilot for 5,000 students and 200 groups | UR-11 | NFR-4; provisional NFR-2 | US-6: population test, measured latency, launch unknowns |
+| S5: delete cancelled-event attendance within 30 days | UR-12 | FR-13, FR-17, NFR-5 | US-7: deletion across copies and non-cancelled boundary |
+| S5: collect only needed personal data | UR-13 | FR-18, FR-19 | US-7: undeclared field rejection |
+| S3/S6: reduce repeat investigation (A7 proposal) | UR-14 | FR-20 | US-9: filtered reports retain individual evidence |
 
 ## 8. Assumptions and open questions
 
