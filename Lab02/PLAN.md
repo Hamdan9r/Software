@@ -33,8 +33,9 @@ All dates are relative planning assumptions, not completed activities. Assume tw
 | Milestone | When | What is true then |
 |---|---|---|
 | Confirm baseline and data | Before Sprint 1 | Technician confirms the minimum loan cycle, identity source, asset IDs, borrower identifiers, retention/access policy and demonstration dataset. |
-| Complete a usable loan cycle | End of week 1 | Authorized staff can check out and return a registered asset; duplicate checkout and unauthorized changes are rejected; acceptance checks and a technician demo are ready. |
-| Review the increment | End of week 1 review | Technician inspects fictional checkout/return examples and the selected visibility features; feedback changes the backlog, with no claim of approval until the review occurs. |
+| Complete a usable loan cycle | End of week 1 | Authorized staff can check out and return a registered asset; duplicate checkout and unauthorized changes are rejected; acceptance checks and the weekly open-loan report is generated for an agreed cutoff; acceptance checks and a technician demo are ready. |
+| Review the increment | End of week 1 review | Technician inspects fictional checkout/return examples and the weekly open-loan report; feedback changes the backlog, with no claim of approval until the review occurs. |
+| Start weekly reporting | First agreed cutoff, proposed by end of week 1 | Staff can retrieve the report of every open-at-cutoff loan; the schedule, permission boundary, empty report and retry path have passed acceptance checks. The technician must confirm whether this precedes exams. |
 | Pilot and improve | Week 2, if review accepts readiness | An agreed small asset set is used under technician supervision; failures and recovery are reviewed before expanding use. |
 
 ## Risks
@@ -47,6 +48,8 @@ All dates are relative planning assumptions, not completed activities. Assume tw
 | University identity integration is unavailable | Medium | Verify access in week 0; use a clearly marked local test identity adapter only for demonstrations, never as production authentication. |
 | Borrower records are exposed or kept too long | Medium | Restrict access to authorized staff, use fictional test data, and confirm a minimum data inventory and retention policy before a pilot. |
 | A failed save loses or partially updates a loan | Medium | Commit asset/loan changes together; preserve the previous state after a failed transaction and verify backup/restore. |
+| Exam/report deadline is earlier than the assumed sprint | High | Confirm the exact first report date now; prioritize LL-9 and agree a feasible smaller increment or an authorized manual contingency if needed. |
+| Report misses loans or exposes borrower data | Medium | Test a consistent cutoff snapshot, reconcile count/rows against fixtures, restrict downloads and agree retention; do not email reports to unconfirmed recipients. |
 | Estimates exceed the team's actual capacity | Medium | Re-estimate with the people doing the work and remove low-priority items before the sprint starts. |
 
 ## Assumptions, questions and provenance
@@ -58,3 +61,7 @@ All dates are relative planning assumptions, not completed activities. Assume tw
 - Q2: Who can authorize a checkout/return, which borrower attributes are necessary, and what retention and recovery policies apply?
 - Q3: What are the agreed pilot date, technician availability and real team capacity?
 - Provenance: the supplied change notes were inadvertently read in the initial file scan before planning commits existed. The baseline commits document a scenario baseline, not an unseen-change experiment. This ordering limitation cannot be repaired by rewriting history.
+
+## Change impact
+
+The technician's change in `sealed/change-C-labloans.md` makes weekly visibility of every open loan urgent because exams are approaching. The process choice remains iterative: reprioritize with a visible tradeoff, demonstrate the revised increment, and confirm the first real deadline. LL-9 replaces LL-5/LL-6 in the first sprint at equal estimated effort; checkout/return integrity remains essential. Confirm Monday 09:00 Asia/Dubai as the proposed weekly cutoff, report recipients, fields and retention. None of those details, or the exam date, are provided by the note.
