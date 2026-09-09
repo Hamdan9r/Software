@@ -1,8 +1,8 @@
 # CampusPulse requirements
 
-Name or team:
+Name or team: Hamdan Alameri
 
-Date:
+Date: 9 September 2026
 
 Status: working draft
 
@@ -13,31 +13,38 @@ short enough to test and trace.
 
 ### In scope
 
-List at least three capabilities that belong in the first release.
-
--
--
--
+- University sign-in and verified university groups in a browser-based pilot.
+- Group announcements and events, shared officer drafts, and approved-officer publishing.
+- Following groups, viewing their published content, and RSVP with private-by-default identities.
+- Whole-university and members-only event audiences; corrections and notifications to current RSVPs.
+- Reports, moderation, official verification, decision records, and group appeals.
+- Phone-browser and screen-reader access for a pilot of 5,000 students and 200 groups before Orientation Week.
 
 ### Out of scope
 
-List at least two explicit exclusions.
-
--
--
+- X-1: Native mobile applications.
+- X-2: Direct messages.
+- X-3: External users.
+- X-4: Payments.
+- X-5: Video hosting.
+- X-6: AI recommendations.
 
 ## 2. User requirements
 
-Write at least five customer-readable needs. Use one need per line and trace it
-to the stakeholder evidence.
-
-Format: `UR-1 [Must] ... [Source: S1]`
-
-- UR-1 [Must]
-- UR-2 [Must]
-- UR-3 [Must]
-- UR-4 [Must]
-- UR-5 [Must]
+- UR-1 [Must] Students can follow university groups and find their published announcements and events in one service. [Source: S1]
+- UR-2 [Must] Students can RSVP without exposing their identity to other attendees unless they explicitly choose to share it. [Source: S1, S5]
+- UR-3 [Must] Students, including screen-reader users, can complete the main student activities in a phone browser. [Source: S1]
+- UR-4 [Must] Approved group officers can collaborate on their group's drafts. [Source: S2]
+- UR-5 [Must] Group officers can rely on publishing being restricted to approved officers of the relevant group. [Source: S2]
+- UR-6 [Must] Group officers can restrict an event to group members or make it available to the university community. [Source: S2]
+- UR-7 [Must] Students who RSVP are told when their event's time or place changes. [Source: S2]
+- UR-8 [Must] Moderators can review reported content and its reason, including impersonation and repeated-post reports. [Source: S3, S6]
+- UR-9 [Must] Moderators can hide harmful content while preserving the evidence and accountable decision history needed for a group's appeal. [Source: S3]
+- UR-10 [Must] Students can trust that an official badge means Student Affairs checked the group. [Source: S4, S6]
+- UR-11 [Must] Student Affairs can launch a pilot for 5,000 students and 200 groups before Orientation Week. [Source: S4]
+- UR-12 [Must] Students' cancelled-event attendance data is deleted within 30 days of cancellation. [Source: S5]
+- UR-13 [Must] Students provide only the personal data needed for the service. [Source: S5]
+- UR-14 [Could] Moderators can review repeated reports about the same item together to reduce duplicate investigation. [Source: S3, S6; proposed enhancement, A7]
 
 ## 3. Functional requirements
 
