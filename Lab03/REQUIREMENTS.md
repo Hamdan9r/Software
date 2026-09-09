@@ -48,31 +48,34 @@ short enough to test and trace.
 
 ## 3. Functional requirements
 
-Write at least six observable system behaviours. Start each one with "The
-system shall" and trace it to one or more user requirements.
-
-Format: `FR-1 [Must] The system shall ... [Source: UR-1]`
-
-- FR-1 [Must] The system shall
-- FR-2 [Must] The system shall
-- FR-3 [Must] The system shall
-- FR-4 [Must] The system shall
-- FR-5 [Must] The system shall
-- FR-6 [Must] The system shall
+- FR-1 [Must] The system shall require successful university sign-in before granting access to group content or student, officer, and moderation actions. [Source: UR-1, UR-5; release boundary]
+- FR-2 [Must] The system shall let an authenticated student follow or unfollow a verified group and view its published announcements and events, subject to event-audience restrictions. [Source: UR-1]
+- FR-3 [Must] The system shall let an authenticated student create or withdraw their own RSVP for a visible, uncancelled event, with a new RSVP's identity private by default and visible to other eligible attendees only after that student explicitly opts in; opting out shall remove that identity from attendee views. [Source: UR-2]
+- FR-4 [Must] The system shall let approved officers of the same group create, save, open, and edit shared announcement and event drafts. [Source: UR-4]
+- FR-5 [Must] The system shall let an approved officer publish a draft only for their own verified group and reject every other user's publishing attempt without publishing the draft. [Source: UR-5, UR-10]
+- FR-6 [Must] The system shall let an approved officer select whole-university or members-only visibility for their group's event. [Source: UR-6]
+- FR-7 [Must] The system shall deny a non-member access to a members-only event through the feed, search, a direct link, and an RSVP attempt. [Source: UR-6, UR-2]
+- FR-8 [Must] The system shall create a change notification for every current RSVP when an approved officer saves a change to a published event's time or place. [Source: UR-7]
+- FR-9 [Must] The system shall let an authenticated user report an announcement, event, or group profile with an item reference and non-empty reason, rejecting reports that omit either field. [Source: UR-8]
+- FR-10 [Must] The system shall let an authorized moderator hide reported content from ordinary users while retaining the report, a snapshot of the reported content, and the decision record for authorized appeal review. [Source: UR-9]
+- FR-11 [Must] The system shall record the deciding moderator's identity, action, affected item, reason, and timestamp for each hide, restore, or appeal decision. [Source: UR-9]
+- FR-12 [Must] The system shall display the official badge only while the group's verification is approved by an authorized Student Affairs user, rejecting an ordinary officer's attempt to grant or revoke verification. [Source: UR-10]
+- FR-13 [Must] The system shall delete all attendance records and attendance-identifying copies for a cancelled event no later than 30 days after the cancellation timestamp, including copies in exports, backups, and moderation evidence. [Source: UR-12]
+- FR-14 [Must] The system shall show authorized moderators the item snapshot, reason, and report time for impersonation and repeated-announcement reports. [Source: UR-8]
+- FR-15 [Must] The system shall let an approved officer appeal a moderation decision concerning their own group, link the appeal to that decision and its retained evidence, and deny access to another group's appeal. [Source: UR-9]
+- FR-16 [Must] The system shall let an authorized moderator record an appeal outcome and reason, restoring content if the decision is reversed, and make the outcome visible to the appealing group's approved officers. [Source: UR-9]
+- FR-17 [Must] The system shall let an approved officer correct or cancel their own group's published event and record the cancellation timestamp used by the attendance-deletion rule. [Source: UR-7, UR-12]
+- FR-18 [Must] The system shall deny ordinary students and group officers access to private RSVP identities, while addressing event-change notifications to the RSVP owner without revealing the attendee list. [Source: UR-2, UR-13; A4]
+- FR-19 [Must] The system shall collect no personal-data fields outside the approved purpose inventory in A5 and shall reject profile updates containing undeclared personal-data fields. [Source: UR-13]
+- FR-20 [Could] The system shall let a moderator filter the report queue by reported item so all reports for that item can be reviewed together. [Source: UR-14]
 
 ## 4. Non-functional requirements
 
-Write at least four measurable quality requirements. State what is measured,
-the target, and the condition under which the target applies. If you introduce
-a number that is not in the handout, record it as an assumption or open
-question in Section 8.
-
-Format: `NFR-1 [Must] The system shall ... [Measure: target and condition] [Source: UR-1]`
-
-- NFR-1 [Must] The system shall
-- NFR-2 [Must] The system shall
-- NFR-3 [Should] The system shall
-- NFR-4 [Must] The system shall
+- NFR-1 [Must] The system shall support keyboard and screen-reader completion of the main student flows. [Measure: all six flows in A1 can be completed in Safari with VoiceOver and keyboard-only input without an unlabeled action, keyboard trap, or unannounced success/error result during release testing; record tested OS/browser versions] [Source: UR-3]
+- NFR-2 [Should] The system shall respond promptly under the provisional pilot workload. [Measure: p95 end-to-end response time no more than 2 seconds and failed requests below 1% during a 10-minute run of 200 concurrent authenticated sessions, each issuing one request every 5 seconds using the request mix and dataset in A2] [Source: UR-11]
+- NFR-3 [Must] The system shall support the main student flows on a narrow phone viewport. [Measure: all six A1 flows complete at 320 CSS pixels width with controls visible and operable and no horizontal page scrolling in the release browser test; assumed target A3] [Source: UR-3]
+- NFR-4 [Must] The system shall support the pilot population. [Measure: all Must functional acceptance checks pass without missing or incorrectly attributed records on a dataset of 5,000 student accounts and 200 groups, with content and membership fixtures specified in A2] [Source: UR-11]
+- NFR-5 [Must] The system shall meet the cancelled-event attendance-retention limit across all retained copies. [Measure: at cancellation time plus 30 days, a deletion test finds zero attendance records or attendance-identifying copies for that event in active storage, exports, backups, or moderation evidence; repeat after a supported restore procedure] [Source: UR-12]
 
 ## 5. User stories and acceptance criteria
 
@@ -143,13 +146,22 @@ requirement, a system requirement, and a user story.
 
 ## 8. Assumptions and open questions
 
-Separate decisions your team has assumed from questions that still need an
-answer.
-
 ### Assumptions
 
-- A1:
+- A1: The accessibility test set is university sign-in, following/unfollowing, feed/event viewing, RSVP/withdrawal/privacy choice, reading a change notification, and reporting. Safari with VoiceOver plus keyboard-only testing is the proposed minimum release test setup, not a claim of compliance with an accessibility standard. S1 must confirm representative devices and assistive technologies.
+- A2: Provisional load targets are 200 concurrent sessions, one request per session every 5 seconds for 10 minutes, p95 at most 2 seconds, and fewer than 1% failed requests. Fixtures contain 5,000 students, 200 groups, 1,000 published events, 1,000 announcements, five group memberships per student, and 20 RSVPs per event. The request mix is 50% feed reads, 30% event views, and 20% RSVP create/withdraw actions against eligible events. These workload and fixture numbers are team assumptions; only 5,000 students and 200 groups come from S4. Use a representative pilot deployment, document its resources and network conditions, and exclude third-party sign-in latency from this workload. NFR-2 is a provisional Should target pending Q1.
+- A3: The 320 CSS pixel viewport is a proposed measurable minimum, not a number supplied by S1.
+- A4: "Public" attendee visibility means visibility to other authenticated users who are eligible to view the event, never anonymous visitors. Private RSVP identities are hidden from ordinary attendees and officers; event notifications do not require exposing these identities. Necessary exceptional operational access requires a defined policy before launch (Q2).
+- A5: Proposed personal-data inventory: university-issued account identifier (sign-in, ownership and authorization); university display name (officer attribution and explicit opt-in attendee display); group membership and officer approval (authorization); follow relationships (feed); event/RSVP identifier and visibility choice (RSVP and notifications); notification recipient/read state (private updates); and reporter/moderator/appellant identifier, reason and timestamp (reports and accountability). No phone number, home address, date of birth, payment data, or unrelated profile fields are requested. Do not store university passwords. S5 must approve field purposes, operational access, and retention; report text must not solicit unnecessary personal data.
+- A6: The 30-day attendance deletion deadline is not extended by an appeal. Moderation evidence can retain reported content and decisions but must remove cancelled-event attendance identities by the same deadline. Backup/export procedures must make this verifiable. S3 and S5 must agree the separate retention period for other evidence; until then this is a release-blocking policy question, not permission to retain it indefinitely.
+- A7: Grouping reports by item is an optional proposal derived from S3/S6, not an explicit stakeholder request. UR-14 and FR-20 are Could and cannot delay required moderation or abuse handling.
 
 ### Open questions
 
-- Q1:
+- Q1: S4, what is the Orientation Week date and expected peak concurrent use/request rate? Approve or replace A2 before committing to pilot capacity or a launch date. Population size alone does not establish traffic.
+- Q2: S1/S2/S5, does any operational role need access to private RSVP identities, for what necessary purpose, and with which access/audit restrictions? Proposed default: officers cannot see them.
+- Q3: S3/S5, what retention period and access rules apply to non-attendance moderation and appeal evidence? How must identifiers embedded in reports be redacted? Confirm before deployment.
+- Q4: S4, which Student Affairs role grants/revokes verification, and which authority supplies and updates group membership and officer approval? Test fixtures assume these roles are explicitly assigned.
+- Q5: S2, which notification channel and delivery deadline are acceptable for event corrections, and should cancellation also notify current RSVPs? Agree observable delivery behaviour before implementation.
+- Q6: S3/S4, is manual report review and hiding sufficient for the pilot's repeated-post risk, or must automatic throttling and compromised-account recovery be included? Automated controls are not silently assumed to exist.
+
