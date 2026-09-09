@@ -33,7 +33,7 @@ All dates are relative planning assumptions, not completed activities. Assume tw
 | Milestone | When | What is true then |
 |---|---|---|
 | Confirm baseline and data | Before Sprint 1 | Technician confirms the minimum loan cycle, identity source, asset IDs, borrower identifiers, retention/access policy and demonstration dataset. |
-| Complete a usable loan cycle | End of week 1 | Authorized staff can check out and return a registered asset; duplicate checkout and unauthorized changes are rejected; acceptance checks and the weekly open-loan report is generated for an agreed cutoff; acceptance checks and a technician demo are ready. |
+| Complete a usable loan cycle | End of week 1 | Authorized staff can check out and return a registered asset; duplicate checkout and unauthorized changes are rejected; the weekly open-loan report is generated for an agreed cutoff; acceptance checks and a technician demo are ready. |
 | Review the increment | End of week 1 review | Technician inspects fictional checkout/return examples and the weekly open-loan report; feedback changes the backlog, with no claim of approval until the review occurs. |
 | Start weekly reporting | First agreed cutoff, proposed by end of week 1 | Staff can retrieve the report of every open-at-cutoff loan; the schedule, permission boundary, empty report and retry path have passed acceptance checks. The technician must confirm whether this precedes exams. |
 | Pilot and improve | Week 2, if review accepts readiness | An agreed small asset set is used under technician supervision; failures and recovery are reviewed before expanding use. |
