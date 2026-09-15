@@ -21,7 +21,7 @@ and add your own observations before submission.
   `lab04/` inside the student's existing `ai1220` repository.
 - Git repository root: unavailable here. `git rev-parse --show-toplevel`
   reported that the working folder was not a Git repository.
-- Initial report commit hash (`Start lab04 report`): This is the initial report snapshot; the next commit records its hash.
+- Initial report commit hash (`Start lab04 report`): aa169baf81064c7f2e450cf6f80854a61706ac19.
   This report-only snapshot was created during publication, after implementation;
   it does not claim the original Exercise 1 ordering was followed.
 - Files included in that commit: only `Lab04/REPORT.md`.
