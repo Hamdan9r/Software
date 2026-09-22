@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img"><title>02-containers</title><defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#335f92"/></marker></defs><rect x="0" y="0" width="1600" height="1180" rx="8" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<text x="45" y="62.0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#152b46">02 / Containers - Campus Workshop Board</text>
+<text x="45" y="98.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Expands: Campus Workshop Board. Proposed technology and interfaces for a 200-student pilot.</text>
+<rect x="50" y="165" width="400" height="185" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="68" y="200.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Student web browser</text>
+<text x="68" y="229.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Supporting client: HTML/CSS]</text>
+<text x="68" y="264.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Displays pages; submits forms and</text>
+<text x="68" y="291.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">signed session cookie over HTTPS.</text>
+<rect x="525" y="150" width="625" height="755" rx="8" fill="#f8fbff" stroke="#335f92" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="543" y="180.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#152b46">Campus Workshop Board [software system boundary]</text>
+<rect x="565" y="215" width="545" height="240" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="583" y="250.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Board Web App</text>
+<text x="583" y="279.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Container: Python / Flask; server-rendered HTML]</text>
+<text x="583" y="314.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Authenticates every board operation.</text>
+<text x="583" y="341.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Creates/publishes workshops; filters views.</text>
+<text x="583" y="368.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Runs reservation rules and requests mail.</text>
+<text x="583" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">One application, one deployment.</text>
+<rect x="565" y="630" width="545" height="210" rx="8" fill="#e5f4ee" stroke="#335f92" stroke-width="2"/>
+<text x="583" y="665.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Board Database</text>
+<text x="583" y="694.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Container: PostgreSQL; durable disk]</text>
+<text x="583" y="729.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Stores workshop IDs, owner IDs, titles,</text>
+<text x="583" y="756.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">times, capacities, publication states;</text>
+<text x="583" y="783.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">reservation IDs, student IDs, names, emails</text>
+<text x="583" y="810.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">and creation times. Survives restart.</text>
+<rect x="1230" y="180" width="320" height="185" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="1248" y="215.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Campus Identity</text>
+<text x="1248" y="244.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External software system]</text>
+<text x="1248" y="279.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Verifies a university credential;</text>
+<text x="1248" y="306.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">returns ID, name and email.</text>
+<rect x="1230" y="630" width="320" height="185" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="1248" y="665.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">University Mail</text>
+<text x="1248" y="694.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External software system]</text>
+<text x="1248" y="729.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Accepts one new-reservation</text>
+<text x="1248" y="756.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">confirmation request.</text>
+<polyline points="450,245 565,300" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="45" y="393.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">HTTPS: forms + cookie</text>
+<text x="45" y="417.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Returns HTML + own state</text>
+<polyline points="1110,275 1230,275" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1180" y="113.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">HTTPS / JSON: credential</text>
+<text x="1180" y="137.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Returns verified profile / rejection</text>
+<polyline points="1110,400 1185,400 1185,720 1230,720" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1170" y="873.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">HTTPS / JSON</text>
+<text x="1170" y="897.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Email + reservation + workshop</text>
+<text x="1170" y="921.6" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Returns accepted / unavailable</text>
+<polyline points="600,455 600,630" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="635" y="503.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">SQL / PostgreSQL protocol + TLS</text>
+<text x="635" y="527.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Parameterized reads, writes, transactions</text>
+<text x="635" y="551.6" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Returns rows / commit or failure</text>
+<rect x="45" y="505" width="420" height="330" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="63" y="538.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">State and access rules</text>
+<text x="63" y="572.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">No direct browser-to-database access.</text>
+<text x="63" y="597.65" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Browser identity fields are not trusted.</text>
+<text x="63" y="623.3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Signed, expiring cookie contains only</text>
+<text x="63" y="648.95" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Campus Identity-verified claims.</text>
+<text x="63" y="674.6" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Refresh queries stored workshop and</text>
+<text x="63" y="700.25" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">reservation state; no seat counts</text>
+<text x="63" y="725.9" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">are held only in application memory.</text>
+<rect x="525" y="940" width="1025" height="135" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="543" y="973.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">Consistency boundary</text>
+<text x="543" y="1007.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Commit the seat before calling University Mail. Mail failure preserves the seat and returns a warning.</text>
+<text x="543" y="1032.65" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">One database transaction locks a workshop row, checks duplicates/capacity, and inserts at most one seat.</text>
+<text x="543" y="1058.3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">No background workers, queues, payment service or automatic email retries.</text>
+<text x="45" y="1116.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Legend: blue = owned element; grey = external/supporting element; green = persistent store.</text>
+<text x="45" y="1137.6" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Dashed boundary = named parent/scope. Arrow = labelled call/dependency; returns follow the call unless dashed.</text>
+<text x="45" y="1159.2" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">HTTPS / JSON external APIs are design assumptions; actual university API contracts are not supplied.</text></svg>

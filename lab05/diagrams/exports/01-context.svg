@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1020" viewBox="0 0 1500 1020" role="img"><title>01-context</title><defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#335f92"/></marker></defs><rect x="0" y="0" width="1500" height="1020" rx="8" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<text x="45" y="62.0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#152b46">01 / System context - Campus Workshop Board</text>
+<text x="45" y="98.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Scope: the complete software system, its users and university-owned dependencies.</text>
+<rect x="50" y="200" width="410" height="220" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="68" y="235.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">University student</text>
+<text x="68" y="264.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Person]</text>
+<text x="68" y="299.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Signs in, browses published workshops,</text>
+<text x="68" y="326.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">reserves one place and views their</text>
+<text x="68" y="353.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">own reservation.</text>
+<rect x="50" y="570" width="410" height="225" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="68" y="605.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Workshop organiser</text>
+<text x="68" y="634.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Person: role of a university student]</text>
+<text x="68" y="669.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Creates and owns a workshop;</text>
+<text x="68" y="696.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">publishes it and views its attendee</text>
+<text x="68" y="723.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">names and emails.</text>
+<rect x="565" y="265" width="430" height="405" rx="8" fill="#f8fbff" stroke="#335f92" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="583" y="295.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#152b46">Owned by the small development team</text>
+<rect x="590" y="325" width="380" height="270" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="608" y="360.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Campus Workshop Board</text>
+<text x="608" y="389.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Software system]</text>
+<text x="608" y="424.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Student-led photography, music</text>
+<text x="608" y="451.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">and game-development workshops.</text>
+<text x="608" y="478.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Publishes workshops; safely reserves</text>
+<text x="608" y="505.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">seats and stores the results.</text>
+<rect x="1110" y="200" width="340" height="190" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="1128" y="235.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Campus Identity</text>
+<text x="1128" y="264.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External software system]</text>
+<text x="1128" y="299.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">University-owned verification.</text>
+<text x="1128" y="326.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Returns student ID, name, email.</text>
+<rect x="1110" y="605" width="340" height="195" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="1128" y="640.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">University Mail</text>
+<text x="1128" y="669.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External software system]</text>
+<text x="1128" y="704.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">University-owned email service.</text>
+<text x="1128" y="731.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Accepts confirmation requests.</text>
+<polyline points="460,310 590,390" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="465" y="223.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Browse / reserve</text>
+<text x="465" y="247.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Own reservation</text>
+<polyline points="460,665 590,550" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="470" y="703.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Create / publish</text>
+<text x="470" y="727.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Attendee details</text>
+<polyline points="970,390 1110,300" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="985" y="163.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Verify credential</text>
+<text x="985" y="187.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Student profile / rejection</text>
+<polyline points="970,545 1110,700" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1000" y="833.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Request confirmation</text>
+<text x="1000" y="857.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Email + workshop + reservation</text>
+<rect x="50" y="845" width="920" height="95" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="68" y="878.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">Role and access boundary</text>
+<text x="68" y="912.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Creator = organiser/owner; publishing never reserves a seat. Only verified students use the board.</text>
+<text x="45" y="971.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Legend: blue = owned element; grey = external/supporting element; green = persistent store.</text>
+<text x="45" y="992.6" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Dashed boundary = named parent/scope. Arrow = labelled call/dependency; returns follow the call unless dashed.</text></svg>

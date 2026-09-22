@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="04-code" id="04-code">
+    <mxGraphModel dx="1800" dy="1650" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1800" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#ffffff;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="0" y="0" width="1800" height="1650" />
+        </mxCell>
+        <mxCell id="3" value="04 / Code - Reservation Rules" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=32;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="30" width="1710" height="48.2" />
+        </mxCell>
+        <mxCell id="4" value="Expands: Reservation Rules component inside Board Web App. A design sketch, not application implementation." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="79" width="1710" height="30.650000000000002" />
+        </mxCell>
+        <mxCell id="5" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#f8fbff;strokeColor=#335f92;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="145" width="1720" height="950" />
+        </mxCell>
+        <mxCell id="6" value="Reservation Rules [component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="58" y="155" width="1684" height="32.0" />
+        </mxCell>
+        <mxCell id="7" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="200" width="750" height="260" />
+        </mxCell>
+        <mxCell id="8" value="ReservationService" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="212" width="714" height="36.05" />
+        </mxCell>
+        <mxCell id="9" value="[Class: operation coordinator]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="247" width="714" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="10" value="reserve(identity: AuthResult, workshopId: WorkshopId)&#10;    -&gt; ReserveResult&#10;Reject Unverified before any persistence call.&#10;Run AllocationPolicy inside Persistence.runLocked.&#10;Only Created allocation: commit, then request mail.&#10;Existing / rejected: no confirmation call." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="279" width="714" height="167.0" />
+        </mxCell>
+        <mxCell id="11" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="965" y="200" width="750" height="260" />
+        </mxCell>
+        <mxCell id="12" value="AllocationPolicy" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="212" width="714" height="36.05" />
+        </mxCell>
+        <mxCell id="13" value="[Class: reservation decisions using locked Tx]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="247" width="714" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="14" value="decide(student: VerifiedStudent, tx: LockedWorkshopTx)&#10;    -&gt; AllocationResult&#10;1. Missing workshop -&gt; NotFound.&#10;2. Existing reservation for student -&gt; Existing(same row).&#10;3. Not published -&gt; Unpublished.&#10;4. count &gt;= capacity -&gt; Full; otherwise insert one row." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="279" width="714" height="167.0" />
+        </mxCell>
+        <mxCell id="15" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="825" y="320" />
+            <mxPoint as="targetPoint" x="965" y="320" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="decide&#10;student, tx" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="835" y="260" width="125" height="53.6" />
+        </mxCell>
+        <mxCell id="17" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="575" width="750" height="405" />
+        </mxCell>
+        <mxCell id="18" value="Domain types" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="587" width="714" height="36.05" />
+        </mxCell>
+        <mxCell id="19" value="[Value objects / immutable result records]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="622" width="714" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="20" value="StudentId, WorkshopId, ReservationId = opaque strings&#10;Instant = timezone-aware timestamp&#10;VerifiedStudent = {studentId: StudentId, name: str, email: str}&#10;AuthResult = VerifiedStudent | Unverified&#10;Reservation = {id: ReservationId, workshopId: WorkshopId,&#10; studentId: StudentId, name: str, email: str, createdAt: Instant}&#10;AllocationResult = Created(Reservation, Workshop)&#10; | Existing(Reservation) | NotFound | Unpublished | Full&#10;ReserveResult = Created(Reservation, Requested | Unavailable)&#10; | Existing(Reservation) | Rejected(Unverified | NotFound&#10; | Unpublished | Full) | StorageUnavailable" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="654" width="714" height="302.0" />
+        </mxCell>
+        <mxCell id="21" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="965" y="575" width="750" height="405" />
+        </mxCell>
+        <mxCell id="22" value="LockedWorkshopTx" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="587" width="714" height="36.05" />
+        </mxCell>
+        <mxCell id="23" value="[Interface: implemented by Persistence]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="622" width="714" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="24" value="workshop: Workshop | None&#10;findExisting(studentId: StudentId) -&gt; Reservation | None&#10;countReservations() -&gt; int&#10;insert(student: VerifiedStudent) -&gt; Reservation&#10;All methods use the same SQL transaction / connection.&#10;Workshop = {id, ownerId, title, startsAt: Instant,&#10; capacity: int in 1..20, published: bool}.&#10;runLocked(workshopId, decide) -&gt; AllocationResult&#10;returns only after successful COMMIT.&#10;Separate SELECT statements follow the row-lock query." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="654" width="714" height="275.0" />
+        </mxCell>
+        <mxCell id="25" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="420" y="460" />
+            <mxPoint as="targetPoint" x="420" y="575" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="Consumes / returns these typed records" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="510" width="640" height="29.3" />
+        </mxCell>
+        <mxCell id="27" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1340" y="460" />
+            <mxPoint as="targetPoint" x="1340" y="575" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="Reads / inserts through this interface" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="980" y="510" width="665" height="29.3" />
+        </mxCell>
+        <mxCell id="29" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#eef1f5;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="1140" width="750" height="190" />
+        </mxCell>
+        <mxCell id="30" value="Persistence" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="1152" width="714" height="36.05" />
+        </mxCell>
+        <mxCell id="31" value="[Supporting component: Python / psycopg]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="1187" width="714" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="32" value="BEGIN at READ COMMITTED; SELECT workshop FOR UPDATE.&#10;Run callback; COMMIT releases lock; errors roll back.&#10;StorageUnavailable: do not claim success; refresh if commit is uncertain." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="93" y="1219" width="714" height="86.0" />
+        </mxCell>
+        <mxCell id="33" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#eef1f5;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="965" y="1140" width="750" height="190" />
+        </mxCell>
+        <mxCell id="34" value="Confirmation Gateway" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="1152" width="714" height="36.05" />
+        </mxCell>
+        <mxCell id="35" value="[Supporting component: Python / HTTPS client]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="1187" width="714" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="36" value="requestConfirmation(reservation, workshop)&#10;    -&gt; Requested | Unavailable&#10;After new commit only; timeout/failure never undoes seat." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="983" y="1219" width="714" height="86.0" />
+        </mxCell>
+        <mxCell id="37" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="740" y="1140" />
+            <mxPoint as="targetPoint" x="1200" y="980" />
+            <Array as="points">
+              <mxPoint x="740" y="1030" />
+              <mxPoint x="1200" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="Implements LockedWorkshopTx; provides runLocked" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="1055" width="800" height="29.3" />
+        </mxCell>
+        <mxCell id="39" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="825" y="410" />
+            <mxPoint as="targetPoint" x="1340" y="1140" />
+            <Array as="points">
+              <mxPoint x="900" y="410" />
+              <mxPoint x="900" y="1105" />
+              <mxPoint x="1340" y="1105" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="ReservationService: requestConfirmation after commit" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="970" y="1060" width="760" height="29.3" />
+        </mxCell>
+        <mxCell id="41" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="75" y="400" />
+            <mxPoint as="targetPoint" x="150" y="1140" />
+            <Array as="points">
+              <mxPoint x="55" y="400" />
+              <mxPoint x="55" y="1110" />
+              <mxPoint x="150" y="1110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="ReservationService: runLocked(workshopId, decide)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="990" width="740" height="29.3" />
+        </mxCell>
+        <mxCell id="43" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#fff7dd;strokeColor=#b59a40;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1380" width="1720" height="165" />
+        </mxCell>
+        <mxCell id="44" value="Invariant and why overlapping calls cannot break it" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=21;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="58" y="1392" width="1684" height="33.35" />
+        </mxCell>
+        <mxCell id="45" value="For every workshop w: 0 &lt;= count(reservations for w) &lt;= w.capacity; UNIQUE(workshopId, studentId) enforces one seat per student.&#10;Every reservation writer first locks the same workshop row; a competitor waits until COMMIT/ROLLBACK, then later READ COMMITTED queries see committed seats.&#10;While holding that lock, check existing BEFORE full, then insert only if count &lt; capacity. Thus each new seat increases the count by exactly 1 within the limit.&#10;Capacity is immutable in this create/publish-only pilot. Database PKs, FKs, nonempty-title and capacity CHECK constraints support the invariant." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="58" y="1428" width="1684" height="107.60000000000001" />
+        </mxCell>
+        <mxCell id="46" value="Legend: blue = owned element; grey = external/supporting element; green = persistent store.&#10;Dashed boundary = named parent/scope. Arrow = labelled call/dependency; returns follow the call unless dashed.&#10;Arrows = labelled calls, type use or implementation. PK = primary key; FK = foreign key; Tx = transaction. Existing rows remain unchanged." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=16;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1575" width="1710" height="69.80000000000001" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

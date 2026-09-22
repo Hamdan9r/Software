@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2140" viewBox="0 0 1800 2140" role="img"><title>03-components</title><defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#335f92"/></marker></defs><rect x="0" y="0" width="1800" height="2140" rx="8" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<text x="45" y="62.0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#152b46">03 / Components - Board Web App</text>
+<text x="45" y="98.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Expands: Board Web App. Six Python components inside one Flask process; supporting systems remain outside.</text>
+<rect x="70" y="155" width="480" height="165" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="88" y="190.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Campus Identity</text>
+<text x="88" y="219.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External software system]</text>
+<text x="88" y="254.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Verifies credential; supplies ID, name, email.</text>
+<rect x="700" y="155" width="510" height="165" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="718" y="190.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Student web browser</text>
+<text x="718" y="219.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Supporting client: HTML/CSS]</text>
+<text x="718" y="254.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Submits forms/cookie and displays HTML.</text>
+<rect x="35" y="440" width="1730" height="950" rx="8" fill="#f8fbff" stroke="#335f92" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="53" y="470.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#152b46"></text>
+<text x="1150" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#152b46">Board Web App [container: Python / Flask]</text>
+<rect x="70" y="505" width="480" height="200" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="88" y="540.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Identity Gateway</text>
+<text x="88" y="569.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python / HTTPS client]</text>
+<text x="88" y="604.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Authenticates with Campus Identity.</text>
+<text x="88" y="631.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Issues signed, expiring session cookies.</text>
+<text x="88" y="658.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Validates signature and expiry on each call.</text>
+<rect x="700" y="505" width="510" height="200" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="718" y="540.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Web Endpoints</text>
+<text x="718" y="569.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Flask routes + templates]</text>
+<text x="718" y="604.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Gates every board operation on verified identity.</text>
+<text x="718" y="631.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Dispatches commands and renders results.</text>
+<text x="718" y="658.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Never trusts student IDs supplied by a form.</text>
+<rect x="70" y="860" width="650" height="290" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="88" y="895.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Workshop Service</text>
+<text x="88" y="924.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="88" y="959.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Create: generate unique ID; owner = verified studentId.</text>
+<text x="88" y="986.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Require nonempty trimmed title, start time, capacity 1-20.</text>
+<text x="88" y="1013.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Owner-only publish; publishing never creates a seat.</text>
+<text x="88" y="1040.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Browse: published title, time, capacity, remaining seats,</text>
+<text x="88" y="1067.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">and caller own reservation; no attendee list.</text>
+<text x="88" y="1094.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Attendees: compare stored ownerId to caller ID first;</text>
+<text x="88" y="1121.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">only the owner receives names and emails.</text>
+<rect x="1030" y="860" width="650" height="240" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="1048" y="895.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Reservation Rules</text>
+<text x="1048" y="924.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="1048" y="959.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Reject unverified calls before storage; check publication.</text>
+<text x="1048" y="986.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Inside a locked transaction: existing first, then capacity.</text>
+<text x="1048" y="1013.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Commit a new seat before requesting confirmation.</text>
+<text x="1048" y="1040.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">No duplicate seat, duplicate email or mail-failure rollback.</text>
+<text x="1048" y="1067.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Typed operation and concurrency proof: see 04-code.</text>
+<rect x="70" y="1210" width="650" height="150" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="88" y="1245.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Persistence</text>
+<text x="88" y="1274.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python / psycopg]</text>
+<text x="88" y="1309.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Parameterized SQL, fresh reads, locked transactions.</text>
+<text x="88" y="1336.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Durable workshop + reservation records and constraints.</text>
+<rect x="1030" y="1210" width="650" height="150" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="1048" y="1245.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Confirmation Gateway</text>
+<text x="1048" y="1274.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python / HTTPS client]</text>
+<text x="1048" y="1309.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">One confirmation attempt with a finite timeout.</text>
+<text x="1048" y="1336.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Maps acceptance/failure to Requested / Unavailable.</text>
+<rect x="70" y="1510" width="650" height="155" rx="8" fill="#e5f4ee" stroke="#335f92" stroke-width="2"/>
+<text x="88" y="1545.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Board Database</text>
+<text x="88" y="1574.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Container: PostgreSQL; durable disk]</text>
+<text x="88" y="1609.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Stores workshops and reservations; enforces constraints.</text>
+<rect x="1030" y="1510" width="650" height="155" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="1048" y="1545.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">University Mail</text>
+<text x="1048" y="1574.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External software system]</text>
+<text x="1048" y="1609.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Accepts confirmation requests; may be unavailable.</text>
+<polyline points="310,505 310,320" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="330" y="368.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">B: verify credential</text>
+<polyline points="960,320 960,505" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="990" y="368.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">A: HTTPS forms / cookie -&gt; HTML</text>
+<polyline points="700,600 550,600" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="610" y="573.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">C</text>
+<polyline points="820,705 820,790 395,790 395,860" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="420" y="765.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">D: workshop operations</text>
+<polyline points="1120,705 1120,785 1355,785 1355,860" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1380" y="798.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">E: reserve</text>
+<polyline points="395,1150 395,1210" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="420" y="1178.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">F</text>
+<polyline points="1030,995 845,995 845,1280 720,1280" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="870" y="1138.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">G: runLocked</text>
+<polyline points="1355,1100 1355,1210" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1380" y="1153.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">H: after new commit only</text>
+<polyline points="395,1360 395,1510" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="420" y="1438.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">I: SQL / PostgreSQL protocol + TLS</text>
+<polyline points="1355,1360 1355,1510" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1380" y="1438.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">J: HTTPS / JSON confirmation</text>
+<rect x="70" y="1710" width="1610" height="315" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="88" y="1743.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">Interfaces and exchanged data (C-H are in-process Python calls)</text>
+<text x="88" y="1777.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">A: credential, create fields, workshopId, session cookie -&gt; HTML pages or command outcome; every board operation requires sign-in.</text>
+<text x="88" y="1802.65" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">B: HTTPS / JSON credential -&gt; verified {studentId, name, email} or rejection. C: signIn(credential) / authenticate(cookie) -&gt; session / AuthResult.</text>
+<text x="88" y="1828.3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">D: create(student, title, startsAt, capacity), publish(student, workshopId), browse(student), attendees(student, workshopId) -&gt; authorised result.</text>
+<text x="88" y="1853.95" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">E: reserve(AuthResult, workshopId) -&gt; ReserveResult. AuthResult = VerifiedStudent {studentId, name, email} | Unverified; see 04-code for results.</text>
+<text x="88" y="1879.6" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">F: saveDraft / publishOwned / readPublished / readAttendees(student, fields or ID) -&gt; stored rows / result; owner checks precede sensitive reads.</text>
+<text x="88" y="1905.25" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">G: runLocked(workshopId, decide) -&gt; allocation result; callback reads existing/count and inserts through LockedWorkshopTx on one connection.</text>
+<text x="88" y="1930.9" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">H: requestConfirmation(reservation, workshop) -&gt; Requested | Unavailable. I: SQL rows, row lock, INSERT and COMMIT -&gt; rows / commit result.</text>
+<text x="88" y="1956.55" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">J: {to: verified email, reservationId, workshop title, start time} -&gt; accepted / unavailable. Mail error never changes stored reservations.</text>
+<text x="88" y="1982.2" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Refresh: browse reads the database again. Remaining = capacity minus stored reservation count; only caller reservation accompanies summaries.</text>
+<text x="45" y="2066.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Legend: blue = owned element; grey = external/supporting element; green = persistent store.</text>
+<text x="45" y="2087.6" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Dashed boundary = named parent/scope. Arrow = labelled call/dependency; returns follow the call unless dashed.</text>
+<text x="45" y="2109.2" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Keys A-J identify exact arrow interfaces. All six components are within the dashed parent boundary.</text></svg>

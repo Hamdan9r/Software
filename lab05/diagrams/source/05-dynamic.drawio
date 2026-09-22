@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="05-dynamic" id="05-dynamic">
+    <mxGraphModel dx="1800" dy="2300" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1800" pageHeight="2300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#ffffff;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="0" y="0" width="1800" height="2300" />
+        </mxCell>
+        <mxCell id="3" value="05 / Dynamic - Ari reserves the final seat while mail is unavailable" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=32;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="30" width="1710" height="48.2" />
+        </mxCell>
+        <mxCell id="4" value="One runtime story using the same static elements. Read panels A, B, C in order; numbers continue across panels." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="79" width="1710" height="30.650000000000002" />
+        </mxCell>
+        <mxCell id="5" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#fff7dd;strokeColor=#b59a40;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="135" width="1710" height="135" />
+        </mxCell>
+        <mxCell id="6" value="Given state" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=21;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="147" width="1674" height="33.35" />
+        </mxCell>
+        <mxCell id="7" value="W17: &quot;Build a tiny game&quot;, owner S10, published, capacity 3. Stored reservations: S21 and S22. Ari = S23 / ari@example.invalid; no seat yet.&#10;Ari already has a valid signed session created after Campus Identity verification. Storage works; nobody else acts during this trace.&#10;Internal calls are Python in-process calls. External browser/mail calls use HTTPS; database calls use PostgreSQL protocol / TLS." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="183" width="1674" height="81.95" />
+        </mxCell>
+        <mxCell id="8" value="A / Authenticate and dispatch" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="305" width="1710" height="36.05" />
+        </mxCell>
+        <mxCell id="9" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#eef1f5;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="355" width="350" height="120" />
+        </mxCell>
+        <mxCell id="10" value="Ari" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="367" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="11" value="[Person: university student]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="402" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="12" value="Reserves a place." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="434" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="13" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="475" />
+            <mxPoint as="targetPoint" x="220" y="835" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="435" y="355" width="350" height="120" />
+        </mxCell>
+        <mxCell id="15" value="Web Endpoints" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="367" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="16" value="[Component: Flask]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="402" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="17" value="Routes authenticated requests." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="434" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="18" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="475" />
+            <mxPoint as="targetPoint" x="610" y="835" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="825" y="355" width="350" height="120" />
+        </mxCell>
+        <mxCell id="20" value="Identity Gateway" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="367" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="21" value="[Component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="402" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="22" value="Validates signed sessions." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="434" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="23" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="475" />
+            <mxPoint as="targetPoint" x="1000" y="835" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1215" y="355" width="350" height="120" />
+        </mxCell>
+        <mxCell id="25" value="Reservation Rules" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1233" y="367" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="26" value="[Component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1233" y="402" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="27" value="Coordinates allocation." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1233" y="434" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="28" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1390" y="475" />
+            <mxPoint as="targetPoint" x="1390" y="835" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="535" />
+            <mxPoint as="targetPoint" x="610" y="535" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="1. POST reserve(W17), cookie [HTTPS]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="232" y="506" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="31" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="605" />
+            <mxPoint as="targetPoint" x="1000" y="605" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="2. authenticate(cookie)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="576" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="33" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="675" />
+            <mxPoint as="targetPoint" x="610" y="675" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="3. VerifiedStudent(S23, Ari, ari@example.invalid)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="646" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="35" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="755" />
+            <mxPoint as="targetPoint" x="1390" y="755" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="4. reserve(VerifiedStudent(S23, Ari, ari@example.invalid), W17)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="726" width="760" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="37" value="Campus Identity is not called again: the valid signed session already proves the university identity. No client-supplied student ID is trusted." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=18;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="855" width="1710" height="29.3" />
+        </mxCell>
+        <mxCell id="38" value="B / Allocate and commit the seat" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="920" width="1710" height="36.05" />
+        </mxCell>
+        <mxCell id="39" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="970" width="350" height="120" />
+        </mxCell>
+        <mxCell id="40" value="Reservation Rules" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="982" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="41" value="[Component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="1017" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="42" value="Decides eligibility under lock." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="1049" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="43" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="1090" />
+            <mxPoint as="targetPoint" x="220" y="1570" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="435" y="970" width="350" height="120" />
+        </mxCell>
+        <mxCell id="45" value="Persistence" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="982" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="46" value="[Component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="1017" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="47" value="Runs one locked transaction." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="1049" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="48" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="1090" />
+            <mxPoint as="targetPoint" x="610" y="1570" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e5f4ee;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="825" y="970" width="350" height="120" />
+        </mxCell>
+        <mxCell id="50" value="Board Database" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="982" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="51" value="[Container: PostgreSQL]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="1017" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="52" value="Stores workshops and seats." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="1049" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="53" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="1090" />
+            <mxPoint as="targetPoint" x="1000" y="1570" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="1150" />
+            <mxPoint as="targetPoint" x="610" y="1150" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" value="5. runLocked(W17, decide(S23, tx))" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="232" y="1121" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="56" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="1220" />
+            <mxPoint as="targetPoint" x="1000" y="1220" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="57" value="6. BEGIN; SELECT W17 FOR UPDATE" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1191" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="58" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="1290" />
+            <mxPoint as="targetPoint" x="610" y="1290" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59" value="7. Locked W17: published, capacity=3" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1261" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="60" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="1360" />
+            <mxPoint as="targetPoint" x="1000" y="1360" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="61" value="8. SELECT existing(S23,W17); COUNT(W17)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1331" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="62" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="1430" />
+            <mxPoint as="targetPoint" x="610" y="1430" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="63" value="9. existing=None; count=2" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1401" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="64" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="1500" />
+            <mxPoint as="targetPoint" x="1000" y="1500" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="65" value="10. INSERT R23(S23,W17,Ari,email); COMMIT" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1471" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="66" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#fff7dd;strokeColor=#b59a40;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1320" y="1120" width="425" height="340" />
+        </mxCell>
+        <mxCell id="67" value="Decision inside callback" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=21;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1338" y="1132" width="389" height="33.35" />
+        </mxCell>
+        <mxCell id="68" value="Persistence invokes the Reservation&#10;Rules callback using the locked Tx.&#10;It sees no existing seat, a published&#10;workshop, and 2 &lt; 3 seats.&#10;R23 is an illustrative generated ID.&#10;Existing S21/S22 rows are untouched.&#10;The inserted row also stores createdAt.&#10;All statements use one transaction." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1338" y="1168" width="389" height="210.20000000000002" />
+        </mxCell>
+        <mxCell id="69" value="11. Board Database -&gt; Persistence: commit OK, lock released.  12. Persistence -&gt; Reservation Rules: Created(R23, W17)." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1590" width="1710" height="30.650000000000002" />
+        </mxCell>
+        <mxCell id="70" value="C / Request confirmation and show the outcome" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1655" width="1710" height="36.05" />
+        </mxCell>
+        <mxCell id="71" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="1705" width="350" height="120" />
+        </mxCell>
+        <mxCell id="72" value="Reservation Rules" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="1717" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="73" value="[Component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="1752" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="74" value="Keeps the committed seat." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="1784" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="75" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="1825" />
+            <mxPoint as="targetPoint" x="220" y="2140" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="76" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="435" y="1705" width="350" height="120" />
+        </mxCell>
+        <mxCell id="77" value="Confirmation Gateway" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="1717" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="78" value="[Component: Python]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="1752" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="79" value="Attempts confirmation once." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="453" y="1784" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="80" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="1825" />
+            <mxPoint as="targetPoint" x="610" y="2140" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#eef1f5;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="825" y="1705" width="350" height="120" />
+        </mxCell>
+        <mxCell id="82" value="University Mail" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="1717" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="83" value="[External system]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="1752" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="84" value="Unavailable in this trace." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="843" y="1784" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="85" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="1825" />
+            <mxPoint as="targetPoint" x="1000" y="2140" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="86" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#e9f2ff;strokeColor=#335f92;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1215" y="1705" width="350" height="120" />
+        </mxCell>
+        <mxCell id="87" value="Web Endpoints" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=23;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1233" y="1717" width="314" height="36.05" />
+        </mxCell>
+        <mxCell id="88" value="[Component: Flask]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#335f92;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1233" y="1752" width="314" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="89" value="Renders result to Ari." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1233" y="1784" width="314" height="32.0" />
+        </mxCell>
+        <mxCell id="90" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=none;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1390" y="1825" />
+            <mxPoint as="targetPoint" x="1390" y="2140" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="91" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="1880" />
+            <mxPoint as="targetPoint" x="610" y="1880" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="92" value="13. requestConfirmation(R23, W17)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="232" y="1851" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="93" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=0;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="1945" />
+            <mxPoint as="targetPoint" x="1000" y="1945" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="94" value="14. HTTPS: to Ari, R23, title, start time" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1916" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="95" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1000" y="2010" />
+            <mxPoint as="targetPoint" x="610" y="2010" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96" value="15. Unavailable (service error / timeout)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="622" y="1981" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="97" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="610" y="2075" />
+            <mxPoint as="targetPoint" x="220" y="2075" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="98" value="16. Unavailable; no retry" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="232" y="2046" width="370" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="99" value="" style="edgeStyle=none;html=0;rounded=0;endArrow=block;endFill=1;strokeColor=#335f92;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="220" y="2140" />
+            <mxPoint as="targetPoint" x="1390" y="2140" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="100" value="17. Created(R23, Unavailable) -&gt; Web Endpoints. No rollback; 3 stored seats, 0 remaining." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="240" y="2110" width="1150" height="27.950000000000003" />
+        </mxCell>
+        <mxCell id="101" value="" style="rounded=1;arcSize=5;whiteSpace=wrap;html=0;fillColor=#fff7dd;strokeColor=#b59a40;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="2170" width="1710" height="75" />
+        </mxCell>
+        <mxCell id="102" value="18. Web Endpoints -&gt; Ari [HTTPS / HTML]" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=21;fontColor=#152b46;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="2182" width="1674" height="33.35" />
+        </mxCell>
+        <mxCell id="103" value="&quot;Your reservation for 'Build a tiny game' succeeded, but email is unavailable.&quot; Own reservation R23. On refresh: same stored seat, 0 remaining." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="63" y="2218" width="1674" height="30.650000000000002" />
+        </mxCell>
+        <mxCell id="104" value="Legend: blue = component; grey = external/person; green = store; dashed vertical = lifeline; solid arrow = call; dashed arrow = return. Numbers = runtime order." style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Arial;fontSize=16;fontColor=#152b46;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="2258" width="1710" height="26.6" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

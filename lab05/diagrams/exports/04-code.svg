@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1650" viewBox="0 0 1800 1650" role="img"><title>04-code</title><defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#335f92"/></marker></defs><rect x="0" y="0" width="1800" height="1650" rx="8" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<text x="45" y="62.0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#152b46">04 / Code - Reservation Rules</text>
+<text x="45" y="98.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Expands: Reservation Rules component inside Board Web App. A design sketch, not application implementation.</text>
+<rect x="40" y="145" width="1720" height="950" rx="8" fill="#f8fbff" stroke="#335f92" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="58" y="175.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#152b46">Reservation Rules [component: Python]</text>
+<rect x="75" y="200" width="750" height="260" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="93" y="235.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">ReservationService</text>
+<text x="93" y="264.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Class: operation coordinator]</text>
+<text x="93" y="299.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">reserve(identity: AuthResult, workshopId: WorkshopId)</text>
+<text x="93" y="326.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">    -&gt; ReserveResult</text>
+<text x="93" y="353.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Reject Unverified before any persistence call.</text>
+<text x="93" y="380.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Run AllocationPolicy inside Persistence.runLocked.</text>
+<text x="93" y="407.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Only Created allocation: commit, then request mail.</text>
+<text x="93" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Existing / rejected: no confirmation call.</text>
+<rect x="965" y="200" width="750" height="260" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="983" y="235.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">AllocationPolicy</text>
+<text x="983" y="264.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Class: reservation decisions using locked Tx]</text>
+<text x="983" y="299.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">decide(student: VerifiedStudent, tx: LockedWorkshopTx)</text>
+<text x="983" y="326.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">    -&gt; AllocationResult</text>
+<text x="983" y="353.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">1. Missing workshop -&gt; NotFound.</text>
+<text x="983" y="380.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">2. Existing reservation for student -&gt; Existing(same row).</text>
+<text x="983" y="407.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">3. Not published -&gt; Unpublished.</text>
+<text x="983" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">4. count &gt;= capacity -&gt; Full; otherwise insert one row.</text>
+<polyline points="825,320 965,320" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="835" y="278.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">decide</text>
+<text x="835" y="302.3" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">student, tx</text>
+<rect x="75" y="575" width="750" height="405" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="93" y="610.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Domain types</text>
+<text x="93" y="639.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Value objects / immutable result records]</text>
+<text x="93" y="674.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">StudentId, WorkshopId, ReservationId = opaque strings</text>
+<text x="93" y="701.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Instant = timezone-aware timestamp</text>
+<text x="93" y="728.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">VerifiedStudent = {studentId: StudentId, name: str, email: str}</text>
+<text x="93" y="755.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">AuthResult = VerifiedStudent | Unverified</text>
+<text x="93" y="782.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Reservation = {id: ReservationId, workshopId: WorkshopId,</text>
+<text x="93" y="809.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46"> studentId: StudentId, name: str, email: str, createdAt: Instant}</text>
+<text x="93" y="836.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">AllocationResult = Created(Reservation, Workshop)</text>
+<text x="93" y="863.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46"> | Existing(Reservation) | NotFound | Unpublished | Full</text>
+<text x="93" y="890.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">ReserveResult = Created(Reservation, Requested | Unavailable)</text>
+<text x="93" y="917.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46"> | Existing(Reservation) | Rejected(Unverified | NotFound</text>
+<text x="93" y="944.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46"> | Unpublished | Full) | StorageUnavailable</text>
+<rect x="965" y="575" width="750" height="405" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="983" y="610.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">LockedWorkshopTx</text>
+<text x="983" y="639.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Interface: implemented by Persistence]</text>
+<text x="983" y="674.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">workshop: Workshop | None</text>
+<text x="983" y="701.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">findExisting(studentId: StudentId) -&gt; Reservation | None</text>
+<text x="983" y="728.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">countReservations() -&gt; int</text>
+<text x="983" y="755.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">insert(student: VerifiedStudent) -&gt; Reservation</text>
+<text x="983" y="782.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">All methods use the same SQL transaction / connection.</text>
+<text x="983" y="809.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Workshop = {id, ownerId, title, startsAt: Instant,</text>
+<text x="983" y="836.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46"> capacity: int in 1..20, published: bool}.</text>
+<text x="983" y="863.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">runLocked(workshopId, decide) -&gt; AllocationResult</text>
+<text x="983" y="890.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">returns only after successful COMMIT.</text>
+<text x="983" y="917.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Separate SELECT statements follow the row-lock query.</text>
+<polyline points="420,460 420,575" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="80" y="528.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Consumes / returns these typed records</text>
+<polyline points="1340,460 1340,575" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="980" y="528.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Reads / inserts through this interface</text>
+<rect x="75" y="1140" width="750" height="190" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="93" y="1175.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Persistence</text>
+<text x="93" y="1204.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Supporting component: Python / psycopg]</text>
+<text x="93" y="1239.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">BEGIN at READ COMMITTED; SELECT workshop FOR UPDATE.</text>
+<text x="93" y="1266.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Run callback; COMMIT releases lock; errors roll back.</text>
+<text x="93" y="1293.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">StorageUnavailable: do not claim success; refresh if commit is uncertain.</text>
+<rect x="965" y="1140" width="750" height="190" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="983" y="1175.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Confirmation Gateway</text>
+<text x="983" y="1204.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Supporting component: Python / HTTPS client]</text>
+<text x="983" y="1239.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">requestConfirmation(reservation, workshop)</text>
+<text x="983" y="1266.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">    -&gt; Requested | Unavailable</text>
+<text x="983" y="1293.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">After new commit only; timeout/failure never undoes seat.</text>
+<polyline points="740,1140 740,1030 1200,1030 1200,980" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="80" y="1073.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Implements LockedWorkshopTx; provides runLocked</text>
+<polyline points="825,410 900,410 900,1105 1340,1105 1340,1140" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="970" y="1078.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">ReservationService: requestConfirmation after commit</text>
+<polyline points="75,400 55,400 55,1110 150,1110 150,1140" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="80" y="1008.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">ReservationService: runLocked(workshopId, decide)</text>
+<rect x="40" y="1380" width="1720" height="165" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="58" y="1413.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">Invariant and why overlapping calls cannot break it</text>
+<text x="58" y="1447.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">For every workshop w: 0 &lt;= count(reservations for w) &lt;= w.capacity; UNIQUE(workshopId, studentId) enforces one seat per student.</text>
+<text x="58" y="1472.65" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Every reservation writer first locks the same workshop row; a competitor waits until COMMIT/ROLLBACK, then later READ COMMITTED queries see committed seats.</text>
+<text x="58" y="1498.3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">While holding that lock, check existing BEFORE full, then insert only if count &lt; capacity. Thus each new seat increases the count by exactly 1 within the limit.</text>
+<text x="58" y="1523.95" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Capacity is immutable in this create/publish-only pilot. Database PKs, FKs, nonempty-title and capacity CHECK constraints support the invariant.</text>
+<text x="45" y="1591.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Legend: blue = owned element; grey = external/supporting element; green = persistent store.</text>
+<text x="45" y="1612.6" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Dashed boundary = named parent/scope. Arrow = labelled call/dependency; returns follow the call unless dashed.</text>
+<text x="45" y="1634.2" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Arrows = labelled calls, type use or implementation. PK = primary key; FK = foreign key; Tx = transaction. Existing rows remain unchanged.</text></svg>

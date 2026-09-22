@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2300" viewBox="0 0 1800 2300" role="img"><title>05-dynamic</title><defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#335f92"/></marker></defs><rect x="0" y="0" width="1800" height="2300" rx="8" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+<text x="45" y="62.0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="start" fill="#152b46">05 / Dynamic - Ari reserves the final seat while mail is unavailable</text>
+<text x="45" y="98.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">One runtime story using the same static elements. Read panels A, B, C in order; numbers continue across panels.</text>
+<rect x="45" y="135" width="1710" height="135" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="63" y="168.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">Given state</text>
+<text x="63" y="202.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">W17: &quot;Build a tiny game&quot;, owner S10, published, capacity 3. Stored reservations: S21 and S22. Ari = S23 / ari@example.invalid; no seat yet.</text>
+<text x="63" y="227.65" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Ari already has a valid signed session created after Campus Identity verification. Storage works; nobody else acts during this trace.</text>
+<text x="63" y="253.3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Internal calls are Python in-process calls. External browser/mail calls use HTTPS; database calls use PostgreSQL protocol / TLS.</text>
+<text x="45" y="328.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">A / Authenticate and dispatch</text>
+<rect x="45" y="355" width="350" height="120" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="63" y="390.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Ari</text>
+<text x="63" y="419.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Person: university student]</text>
+<text x="63" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Reserves a place.</text>
+<polyline points="220,475 220,835" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="435" y="355" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="453" y="390.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Web Endpoints</text>
+<text x="453" y="419.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Flask]</text>
+<text x="453" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Routes authenticated requests.</text>
+<polyline points="610,475 610,835" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="825" y="355" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="843" y="390.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Identity Gateway</text>
+<text x="843" y="419.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="843" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Validates signed sessions.</text>
+<polyline points="1000,475 1000,835" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="1215" y="355" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="1233" y="390.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Reservation Rules</text>
+<text x="1233" y="419.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="1233" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Coordinates allocation.</text>
+<polyline points="1390,475 1390,835" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<polyline points="220,535 610,535" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="232" y="523.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">1. POST reserve(W17), cookie [HTTPS]</text>
+<polyline points="610,605 1000,605" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="622" y="593.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">2. authenticate(cookie)</text>
+<polyline points="1000,675 610,675" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="622" y="663.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">3. VerifiedStudent(S23, Ari, ari@example.invalid)</text>
+<polyline points="610,755 1390,755" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="622" y="743.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">4. reserve(VerifiedStudent(S23, Ari, ari@example.invalid), W17)</text>
+<text x="45" y="873.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#152b46">Campus Identity is not called again: the valid signed session already proves the university identity. No client-supplied student ID is trusted.</text>
+<text x="45" y="943.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">B / Allocate and commit the seat</text>
+<rect x="45" y="970" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="63" y="1005.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Reservation Rules</text>
+<text x="63" y="1034.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="63" y="1069.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Decides eligibility under lock.</text>
+<polyline points="220,1090 220,1570" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="435" y="970" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="453" y="1005.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Persistence</text>
+<text x="453" y="1034.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="453" y="1069.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Runs one locked transaction.</text>
+<polyline points="610,1090 610,1570" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="825" y="970" width="350" height="120" rx="8" fill="#e5f4ee" stroke="#335f92" stroke-width="2"/>
+<text x="843" y="1005.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Board Database</text>
+<text x="843" y="1034.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Container: PostgreSQL]</text>
+<text x="843" y="1069.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Stores workshops and seats.</text>
+<polyline points="1000,1090 1000,1570" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<polyline points="220,1150 610,1150" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="232" y="1138.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">5. runLocked(W17, decide(S23, tx))</text>
+<polyline points="610,1220 1000,1220" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="622" y="1208.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">6. BEGIN; SELECT W17 FOR UPDATE</text>
+<polyline points="1000,1290 610,1290" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="622" y="1278.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">7. Locked W17: published, capacity=3</text>
+<polyline points="610,1360 1000,1360" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="622" y="1348.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">8. SELECT existing(S23,W17); COUNT(W17)</text>
+<polyline points="1000,1430 610,1430" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="622" y="1418.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">9. existing=None; count=2</text>
+<polyline points="610,1500 1000,1500" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="622" y="1488.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">10. INSERT R23(S23,W17,Ari,email); COMMIT</text>
+<rect x="1320" y="1120" width="425" height="340" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="1338" y="1153.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">Decision inside callback</text>
+<text x="1338" y="1187.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Persistence invokes the Reservation</text>
+<text x="1338" y="1212.65" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Rules callback using the locked Tx.</text>
+<text x="1338" y="1238.3" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">It sees no existing seat, a published</text>
+<text x="1338" y="1263.95" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">workshop, and 2 &lt; 3 seats.</text>
+<text x="1338" y="1289.6" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">R23 is an illustrative generated ID.</text>
+<text x="1338" y="1315.25" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">Existing S21/S22 rows are untouched.</text>
+<text x="1338" y="1340.9" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">The inserted row also stores createdAt.</text>
+<text x="1338" y="1366.55" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">All statements use one transaction.</text>
+<text x="45" y="1609.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#152b46">11. Board Database -&gt; Persistence: commit OK, lock released.  12. Persistence -&gt; Reservation Rules: Created(R23, W17).</text>
+<text x="45" y="1678.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">C / Request confirmation and show the outcome</text>
+<rect x="45" y="1705" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="63" y="1740.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Reservation Rules</text>
+<text x="63" y="1769.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="63" y="1804.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Keeps the committed seat.</text>
+<polyline points="220,1825 220,2140" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="435" y="1705" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="453" y="1740.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Confirmation Gateway</text>
+<text x="453" y="1769.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Python]</text>
+<text x="453" y="1804.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Attempts confirmation once.</text>
+<polyline points="610,1825 610,2140" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="825" y="1705" width="350" height="120" rx="8" fill="#eef1f5" stroke="#335f92" stroke-width="2"/>
+<text x="843" y="1740.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">University Mail</text>
+<text x="843" y="1769.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[External system]</text>
+<text x="843" y="1804.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Unavailable in this trace.</text>
+<polyline points="1000,1825 1000,2140" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="1215" y="1705" width="350" height="120" rx="8" fill="#e9f2ff" stroke="#335f92" stroke-width="2"/>
+<text x="1233" y="1740.0" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#152b46">Web Endpoints</text>
+<text x="1233" y="1769.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#335f92">[Component: Flask]</text>
+<text x="1233" y="1804.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#152b46">Renders result to Ari.</text>
+<polyline points="1390,1825 1390,2140" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5"/>
+<polyline points="220,1880 610,1880" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="232" y="1868.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">13. requestConfirmation(R23, W17)</text>
+<polyline points="610,1945 1000,1945" fill="none" stroke="#335f92" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="622" y="1933.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">14. HTTPS: to Ari, R23, title, start time</text>
+<polyline points="1000,2010 610,2010" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="622" y="1998.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">15. Unavailable (service error / timeout)</text>
+<polyline points="610,2075 220,2075" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="232" y="2063.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">16. Unavailable; no retry</text>
+<polyline points="220,2140 1390,2140" fill="none" stroke="#335f92" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="240" y="2127.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#152b46">17. Created(R23, Unavailable) -&gt; Web Endpoints. No rollback; 3 stored seats, 0 remaining.</text>
+<rect x="45" y="2170" width="1710" height="75" rx="8" fill="#fff7dd" stroke="#b59a40" stroke-width="2"/>
+<text x="63" y="2203.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#152b46">18. Web Endpoints -&gt; Ari [HTTPS / HTML]</text>
+<text x="63" y="2237.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#152b46">&quot;Your reservation for &#x27;Build a tiny game&#x27; succeeded, but email is unavailable.&quot; Own reservation R23. On refresh: same stored seat, 0 remaining.</text>
+<text x="45" y="2274.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#152b46">Legend: blue = component; grey = external/person; green = store; dashed vertical = lifeline; solid arrow = call; dashed arrow = return. Numbers = runtime order.</text></svg>
