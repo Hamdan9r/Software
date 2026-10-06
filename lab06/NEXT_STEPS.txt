@@ -1,0 +1,32 @@
+Lab 6 status
+
+The lab06 files are committed to Hamdan9r/Software. The tests commit is 99eea8f951f584c29b56c547a3f81c325e735470.
+The observed run had five tests: three passed and two failed under AC2.
+fees.py and REQUIREMENTS.md remain unchanged.
+
+Still required before the lab is complete:
+1. On your Mac, check codex --version against the instructor-supported build.
+   Use the exact setup and sandbox commands in the supplied lab sheet.
+2. Run the tester and reviewer as named custom subagents in their respective
+   permission-profile sessions. The current tests were written directly and
+   the current review was manual; neither is represented as a sandboxed run.
+   The prepared tester request is in DECISION.md.
+3. Run every sandbox check and replace the unavailable-tool FAIL entries in
+   evidence/sandbox-checks.txt with the results actually observed on your Mac.
+4. Update DECISION.md with the actual Codex version, request used, reviewer
+   finding, and tests commit if the tests change. Commit and push the updates.
+5. The lab sheet requires a private ai1220 repository. This upload uses the
+   public Software repository at your request; resolve this submission
+   requirement with your instructor or transfer the work to a private ai1220
+   repository before submitting.
+6. Check the files on GitHub and submit the repository URL and final full
+   commit hash through the LMS. No LMS submission has been performed here.
+
+Expected example results from the unchanged code:
+late_fee(0): 0, expected 0
+late_fee(1): 0, expected 2 (AC2 failure)
+late_fee(1440): 2, expected 2
+late_fee(1441): 2, expected 4 (AC2 failure)
+late_fee(43200): 20, expected 20
+
+Decision: request changes. Partial days are incorrectly rounded down.

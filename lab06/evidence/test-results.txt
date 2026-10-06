@@ -1,0 +1,17 @@
+Command: python3 -m unittest discover -s tests
+Observed: 5 tests ran; 2 failures; exit code 1.
+
+AC1: late_fee(0) = 0; expected 0; PASS
+AC2: late_fee(1) = 0; expected 2; FAIL
+AC2: late_fee(1440) = 2; expected 2; PASS
+AC2: late_fee(1441) = 2; expected 4; FAIL
+AC3: late_fee(43200) = 20; expected 20; PASS
+
+Manual review (not an independent sandboxed reviewer run):
+The expression minutes_late // 1440 discards a partial day. AC2 requires
+charging for each day or part of a day. For positive nonmultiples of 1440
+below 14400 minutes, the implementation undercharges by AED 2. At 14400
+minutes and above, the cap makes the returned fee correct. AC1 and AC3
+are satisfied by inspection and their supplied examples pass.
+
+The implementation was intentionally left unchanged as required by the lab.

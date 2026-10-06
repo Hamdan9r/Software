@@ -1,0 +1,70 @@
+Codex version: unavailable; bash: line 1: codex: command not found (exit 127)
+Tester reads AGENTS.md and REQUIREMENTS.md: FAIL — unable to verify; codex: command not found (exit 127)
+Tester writes tests/check.txt: FAIL — unable to verify; codex: command not found (exit 127)
+Tester cannot read fees.py or README.md: FAIL — unable to verify; codex: command not found (exit 127)
+Tester cannot change fees.py: FAIL — unable to verify; codex: command not found (exit 127)
+Tester cannot reach example.com: FAIL — unable to verify; codex: command not found (exit 127)
+Reviewer reads AGENTS.md and fees.py: FAIL — unable to verify; codex: command not found (exit 127)
+Reviewer cannot read tests/check.txt: FAIL — unable to verify; codex: command not found (exit 127)
+Reviewer cannot change fees.py: FAIL — unable to verify; codex: command not found (exit 127)
+
+These FAIL entries report an unavailable tool, not observed failures of the configured permissions.
+No sandbox check ran. A missing codex executable is not evidence of sandbox enforcement.
+Run every check again on the instructor-supported Mac build and replace these entries with actual observations.
+
+Observed command output:
+$ codex sandbox -- cat AGENTS.md
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -- cat REQUIREMENTS.md
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -- sh -c 'echo x > tests/check.txt && cat tests/check.txt'
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -- cat fees.py
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -- cat README.md
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -- sh -c 'echo x >> fees.py'
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -- curl -sS https://example.com
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -P reviewer -- cat AGENTS.md
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -P reviewer -- cat fees.py
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -P reviewer -- cat tests/check.txt
+bash: line 1: codex: command not found
+
+Exit code: 127
+
+$ codex sandbox -P reviewer -- sh -c 'echo x >> fees.py'
+bash: line 1: codex: command not found
+
+Exit code: 127
+
